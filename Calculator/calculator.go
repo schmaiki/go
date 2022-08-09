@@ -5,6 +5,8 @@ package calculator
 
 var PI float64 = 3.14159265359
 
+const PI1 float64 = 3.14159265359
+
 func Add(left, right int) int {
 
 	var sum int = left + right
