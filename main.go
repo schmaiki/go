@@ -2,6 +2,7 @@ package main
 
 import (
 	calculator "Go/Calculator"
+	"Go/composite"
 	"fmt"
 )
 
@@ -14,4 +15,5 @@ func main() {
 	fmt.Println(calculator.RunOperation("add", 12, 13))
 	fmt.Println(calculator.RunOperation("sub", 12, 13))
 	fmt.Println(calculator.MultiplayFromAToB(1, 10))
+	fmt.Println(composite.Add(10, 23))
 }
