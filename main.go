@@ -13,4 +13,5 @@ func main() {
 	fmt.Println(calculator.IsSquareNumber(24))
 	fmt.Println(calculator.RunOperation("add", 12, 13))
 	fmt.Println(calculator.RunOperation("sub", 12, 13))
+	fmt.Println(calculator.MultiplayFromAToB(1, 10))
 }
