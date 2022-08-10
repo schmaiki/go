@@ -31,4 +31,11 @@ func main() {
 
 	//composite.DemoCollections()
 	fmt.Println(point.DistanceFromZero())
+
+	result, err := calculator.SquerRoot(-5)
+	if err != nil {
+		fmt.Println(err.Error())
+	} else {
+		fmt.Println(result)
+	}
 }

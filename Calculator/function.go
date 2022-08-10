@@ -1,6 +1,9 @@
 package calculator
 
-import "math"
+import (
+	"errors"
+	"math"
+)
 
 func Abs(value int) int {
 	if value >= 0 {
@@ -41,4 +44,11 @@ func RunOperation(operation string, left, right int) int {
 			/// .....
 		}
 		return result*/
+}
+
+func SquerRoot(value float64) (float64, error) {
+	if value < 0 {
+		return 0, errors.New("value must not be nagative")
+	}
+	return math.Sqrt(value), nil
 }
