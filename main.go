@@ -16,4 +16,14 @@ func main() {
 	fmt.Println(calculator.RunOperation("sub", 12, 13))
 	fmt.Println(calculator.MultiplayFromAToB(1, 10))
 	fmt.Println(composite.Add(10, 23))
+
+	point := composite.Point{
+		X: 3,
+		Y: 2,
+	}
+
+	fmt.Println(point.X, point.Y)
+
+	point1 := composite.NewPoint(3, 8)
+	fmt.Println(point1.X, point1.Y)
 }
