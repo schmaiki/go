@@ -23,9 +23,9 @@ func DemoCollections() {
 	}
 
 	//Maps
-	points := map[string]string{
-		"A": "Maik",
-		"B": "Peters",
+	points := map[string]Point{
+		"A": *NewPoint(2, 1),
+		"B": *NewPoint(3, 6),
 	}
 	fmt.Println(points)
 
