@@ -4,12 +4,23 @@ import (
 	calculator "Go/Calculator"
 	"Go/composite"
 	"fmt"
+	"time"
 )
 
 func main() {
+	queue := make(chan int)
+	go func(q chan int) { //Go routine wird async aufgerufen
+		time.Sleep(time.Second * 1)
+		fmt.Println("Eine Sec vorbei")
+		q <- 23
+	}(queue)
+
 	fmt.Println("24 + 45 =", calculator.Add(24, 45))
 	fmt.Println(calculator.Divide(17, 3))
-	fmt.Println(calculator.Sum(1, 10))
+
+	valueFromQueue := <-queue
+
+	fmt.Println(calculator.Sum(1, valueFromQueue))
 	fmt.Println(calculator.SumUntil(10))
 	fmt.Println(calculator.IsSquareNumber(24))
 	fmt.Println(calculator.RunOperation("add", 12, 13))
