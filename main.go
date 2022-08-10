@@ -25,7 +25,9 @@ func main() {
 	fmt.Println(point.X, point.Y)
 
 	point1 := composite.NewPoint(3, 8)
-	fmt.Println(point1.X, point1.Y)
+	fmt.Println(point1.(composite.Point).X, point1.(composite.Point).Y)
+	//point1 := composite.NewPoint(3, 8)
+	//fmt.Println(point1.X, point1.Y)
 
 	//composite.DemoCollections()
 	fmt.Println(point.DistanceFromZero())

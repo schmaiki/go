@@ -23,12 +23,12 @@ func DemoCollections() {
 	}
 
 	//Maps
-	points := map[string]Point{
+	/*points := map[string]Point{
 		"A": *NewPoint(2, 1),
 		"B": *NewPoint(3, 6),
 	}
-	fmt.Println(points)
+	fmt.Println(points)*/
 
-	some, ok := points["A"]
-	fmt.Println(some, ok)
+	// some, ok := points["A"]
+	// fmt.Println(some, ok)
 }
